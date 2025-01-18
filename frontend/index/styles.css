@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;  
+}
+
+.left-menu, .right-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.left-menu a {
+  padding: 5px 10px;
+  border: 1px solid #333;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#search-input {
+  padding: 0.3rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+  font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+}
+
+#search-input.active {
+  display: block;
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobile-menu-btn span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  justify-content: center;
+}
+
+
+
+.mobile-menu a {
+  padding: 0.8rem 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #333;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-menu a:last-child,
+.mobile-menu a:nth-last-child(2) {
+  border: none;
+  display: inline-block;
+  width: auto;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+}
+
+.mobile-menu .icon-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .left-menu, .right-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+}
+
+
+.gpt {
+  height: calc(100vh - 100px); /* Adjusted height for the container */
+  padding: 0; /* Ensure no padding affects the iframe's size */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center align horizontally if needed */
+  align-items: center; /* Center align vertically if needed */
+}
+
+.gpt iframe {
+  width: 100%; /* Take the full width of the container */
+  height: 100%; /* Take the full height of the container */
+  border: none; /* Remove default iframe border */
+}

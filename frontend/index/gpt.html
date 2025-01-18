@@ -1,0 +1,101 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT - Minimalist Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .gpt-container {
+      text-align: center;
+      padding: 4rem 2rem;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .gpt-button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+      margin-top: 2rem;
+    }
+    
+    .gpt-button:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .gpt-text {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .gpt-description {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-menu">
+      <a href="/">Home</a>
+      <a href="/bio.html">Bio</a>
+      <a href="/gpt.html">GPT</a>
+      <a href="https://blog.vitamin99.cc">Blog</a>
+    </div>
+    
+    <div class="right-menu">
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <div class="search-container">
+        <i class="fas fa-search" id="search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search...">
+      </div>
+    </div>
+
+    <button class="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="/">Home</a>
+    <a href="/bio.html">Bio</a>
+    <a href="/gpt.html">GPT</a>
+    <a href="https://blog.vitamin99.cc">Blog</a>
+    <div class="icon-container">
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="gpt">
+      <iframe id="external-site" src="https://gpt.vitamin99.cc" frameborder="0"></iframe>
+    </div>
+
+  </main>
+</body>
+</html>
