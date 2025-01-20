@@ -23,6 +23,15 @@ body {
   gap: 1.5rem;
 }
 
+.left-menu a:last-child,
+.left-menu a:nth-last-child(1) {
+  border: none;
+  display: inline-block;
+  width: auto;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+}
+
 .navbar a {
   text-decoration: none;
   color: #333;
@@ -90,10 +99,12 @@ body {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  width: 80%;
+  width: 20%;
   margin: 0 auto;
   border: 1px solid #333;
   margin-bottom: 0.5rem;
+  align-items: center;
+  text-align: center;
 }
 
 .mobile-menu a:last-child,
