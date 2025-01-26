@@ -19,7 +19,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         )
     hashed = hash_password(user.password)
     new_user = create_user(db, user.username, hashed)
-    return {"message": "User registered successfully", "user_id": new_user.id}
+    return {"message": "User registered successfully", "user_id": new_user.user_id}
 
 @router.post("/login")
 def login(user: UserLogin, db: Session = Depends(get_db)):

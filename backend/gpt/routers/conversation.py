@@ -29,7 +29,7 @@ def create_new_conversation(
     # 假设你通过某种方式获取 user_id（例如登录后返回的 user_id）
     conversation = create_conversation(db, user_id=user_id, message=conversation_data.message)
     return {
-        "id": conversation.id,
+        "id": conversation.conv_id,
         "message": conversation.message,
         "num_attachments": conversation.num_attachments
     }

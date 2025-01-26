@@ -7,7 +7,7 @@ from sqlalchemy.sql import func
 class User(Base):
     __tablename__ = 'users'
 
-    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, primary_key=True, index=True)
     username = Column(String(255), unique=True, index=True)
     hashed_password = Column(String(255))
 
@@ -16,7 +16,7 @@ class User(Base):
 class Conversation(Base):
     __tablename__ = 'conversations'
 
-    id = Column(Integer, primary_key=True, index=True)
+    conv_id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey('users.id'))
     message = Column(Text)
     created_at = Column(TIMESTAMP, server_default=func.now())
@@ -29,7 +29,7 @@ class Conversation(Base):
 class Attachment(Base):
     __tablename__ = 'attachments'
 
-    id = Column(Integer, primary_key=True, index=True)
+    attach_id = Column(Integer, primary_key=True, index=True)
     conversation_id = Column(Integer, ForeignKey('conversations.id'))
     file_path = Column(String(255))
     uploaded_at = Column(TIMESTAMP, server_default=func.now())

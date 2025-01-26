@@ -27,7 +27,7 @@ def create_conversation(db: Session, user_id: int, message: str):
     return db_conversation
 
 def get_conversation_by_id(db: Session, conversation_id: int):
-    return db.query(models.Conversation).filter(models.Conversation.id == conversation_id).first()
+    return db.query(models.Conversation).filter(models.Conversation.conv_id == conversation_id).first()
 
 def get_conversations_by_user(db: Session, user_id: int):
     return db.query(models.Conversation).filter(models.Conversation.user_id == user_id).all()
